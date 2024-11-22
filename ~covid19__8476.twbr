@@ -1,0 +1,2326 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <BasicButtonObjectTextSupport />
+    <CollapsiblePane />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+    <ZoneFriendlyName />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <style-rule element='all'>
+      <format attr='font-family' value='Tableau Medium' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource caption='country_wise_latest' inline='true' name='federated.0fd0boh0twx5i7178zrgh14idiyf' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='country_wise_latest' name='textscan.13ufi9h14goo9k14v2yp708h02ez'>
+            <connection class='textscan' directory='C:/Users/hsossou/Desktop/hSOSSOU/CongnoRise/COVID-19' filename='country_wise_latest.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.13ufi9h14goo9k14v2yp708h02ez' name='full_grouped.csv' table='[full_grouped#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='string' name='Country/Region' ordinal='1' />
+            <column datatype='integer' name='Confirmed' ordinal='2' />
+            <column datatype='integer' name='Deaths' ordinal='3' />
+            <column datatype='integer' name='Recovered' ordinal='4' />
+            <column datatype='integer' name='Active' ordinal='5' />
+            <column datatype='integer' name='New cases' ordinal='6' />
+            <column datatype='integer' name='New deaths' ordinal='7' />
+            <column datatype='integer' name='New recovered' ordinal='8' />
+            <column datatype='string' name='WHO Region' ordinal='9' />
+          </columns>
+        </relation>
+        <cols>
+          <map key='[Active (full_grouped.csv)]' value='[full_grouped.csv].[Active]' />
+          <map key='[Confirmed (full_grouped.csv)]' value='[full_grouped.csv].[Confirmed]' />
+          <map key='[Country/Region (full_grouped.csv)]' value='[full_grouped.csv].[Country/Region]' />
+          <map key='[Date]' value='[full_grouped.csv].[Date]' />
+          <map key='[Deaths (full_grouped.csv)]' value='[full_grouped.csv].[Deaths]' />
+          <map key='[New cases (full_grouped.csv)]' value='[full_grouped.csv].[New cases]' />
+          <map key='[New deaths (full_grouped.csv)]' value='[full_grouped.csv].[New deaths]' />
+          <map key='[New recovered (full_grouped.csv)]' value='[full_grouped.csv].[New recovered]' />
+          <map key='[Recovered (full_grouped.csv)]' value='[full_grouped.csv].[Recovered]' />
+          <map key='[WHO Region (full_grouped.csv)]' value='[full_grouped.csv].[WHO Region]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country/Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country/Region (full_grouped.csv)]</local-name>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias>Country/Region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Confirmed</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Confirmed (full_grouped.csv)]</local-name>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias>Confirmed</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Deaths (full_grouped.csv)]</local-name>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias>Deaths</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Recovered</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Recovered (full_grouped.csv)]</local-name>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias>Recovered</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Active</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Active (full_grouped.csv)]</local-name>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias>Active</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>New cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[New cases (full_grouped.csv)]</local-name>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias>New cases</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>New deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[New deaths (full_grouped.csv)]</local-name>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias>New deaths</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>New recovered</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[New recovered (full_grouped.csv)]</local-name>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias>New recovered</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WHO Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WHO Region (full_grouped.csv)]</local-name>
+            <parent-name>[full_grouped.csv]</parent-name>
+            <remote-alias>WHO Region</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Active (full grouped.csv)' datatype='integer' name='[Active (full_grouped.csv)]' role='measure' type='quantitative' />
+      <column caption='Calc_DeathCases ' datatype='integer' name='[Calc_ConfirmedCases (copie)_596445492911124481]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM&#13;&#10;(IF [Date] = {FIXED: MAX([Date])} &#13;&#10;and [Deaths (full_grouped.csv)]&gt; 0 &#13;&#10;THEN [New deaths (full_grouped.csv)]&#13;&#10;END)' />
+      </column>
+      <column caption='Calc_ConfirmedCases' datatype='integer' name='[Calculation_596445492903849984]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM&#13;&#10;(IF [Date] = {FIXED: MAX([Date])} &#13;&#10;and [Confirmed (full_grouped.csv)]&gt; 0 &#13;&#10;THEN [New cases (full_grouped.csv)]&#13;&#10;END)' />
+      </column>
+      <column caption='Confirmed (full grouped.csv)' datatype='integer' name='[Confirmed (full_grouped.csv)]' role='measure' type='quantitative' />
+      <column caption='Country/Region (full grouped.csv)' datatype='string' name='[Country/Region (full_grouped.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Deaths (full grouped.csv)' datatype='integer' name='[Deaths (full_grouped.csv)]' role='measure' type='quantitative' />
+      <column caption='New cases (full grouped.csv)' datatype='integer' name='[New cases (full_grouped.csv)]' role='measure' type='quantitative' />
+      <column caption='New deaths (full grouped.csv)' datatype='integer' name='[New deaths (full_grouped.csv)]' role='measure' type='quantitative' />
+      <column caption='New recovered (full grouped.csv)' datatype='integer' name='[New recovered (full_grouped.csv)]' role='measure' type='quantitative' />
+      <column caption='Recovered (full grouped.csv)' datatype='integer' name='[Recovered (full_grouped.csv)]' role='measure' type='quantitative' />
+      <column caption='WHO Region (full grouped.csv)' datatype='string' name='[WHO Region (full_grouped.csv)]' role='dimension' type='nominal' />
+      <column caption='full_grouped.csv' datatype='table' name='[__tableau_internal_object_id__].[full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;FR&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='full_grouped.csv' id='full_grouped.csv_A3E4D218AFC2415AAE11B816C3B869BC'>
+            <properties context=''>
+              <relation connection='textscan.13ufi9h14goo9k14v2yp708h02ez' name='full_grouped.csv' table='[full_grouped#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='string' name='Country/Region' ordinal='1' />
+                  <column datatype='integer' name='Confirmed' ordinal='2' />
+                  <column datatype='integer' name='Deaths' ordinal='3' />
+                  <column datatype='integer' name='Recovered' ordinal='4' />
+                  <column datatype='integer' name='Active' ordinal='5' />
+                  <column datatype='integer' name='New cases' ordinal='6' />
+                  <column datatype='integer' name='New deaths' ordinal='7' />
+                  <column datatype='integer' name='New recovered' ordinal='8' />
+                  <column datatype='string' name='WHO Region' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='As of Date'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column caption='Confirmed (full grouped.csv)' datatype='integer' name='[Confirmed (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Confirmed (full_grouped.csv)]' derivation='None' name='[none:Confirmed (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>4290259</max>
+          </filter>
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <customized-tooltip>
+              <formatted-text>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{9C42A4E5-777B-4D6F-AEB7-810C2D20950C}' />
+    </worksheet>
+    <worksheet name='Confirmed Cases Ban'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column caption='Confirmed (full grouped.csv)' datatype='integer' name='[Confirmed (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='New cases (full grouped.csv)' datatype='integer' name='[New cases (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Confirmed (full_grouped.csv)]' derivation='None' name='[none:Confirmed (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[New cases (full_grouped.csv)]' derivation='Sum' name='[sum:New cases (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>4290259</max>
+          </filter>
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#ffffff' fontsize='12'>Confirmed Cases</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#63adf2' fontsize='18'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{51231277-9370-4DE1-B834-7953AAF03A70}' />
+    </worksheet>
+    <worksheet name='Confirmed Cases Bars'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column caption='Calc_ConfirmedCases' datatype='integer' name='[Calculation_596445492903849984]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM&#13;&#10;(IF [Date] = {FIXED: MAX([Date])} &#13;&#10;and [Confirmed (full_grouped.csv)]&gt; 0 &#13;&#10;THEN [New cases (full_grouped.csv)]&#13;&#10;END)' />
+            </column>
+            <column caption='Confirmed (full grouped.csv)' datatype='integer' name='[Confirmed (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column caption='Country/Region (full grouped.csv)' datatype='string' name='[Country/Region (full_grouped.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='New cases (full grouped.csv)' datatype='integer' name='[New cases (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Confirmed (full_grouped.csv)]' derivation='None' name='[none:Confirmed (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Country/Region (full_grouped.csv)]' derivation='None' name='[none:Country/Region (full_grouped.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[New cases (full_grouped.csv)]' derivation='Sum' name='[sum:New cases (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_596445492903849984]' derivation='User' name='[usr:Calculation_596445492903849984:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>4290259</max>
+          </filter>
+          <filter class='categorical' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='[Calculation_596445492903849984]' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Country/Region (full_grouped.csv):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]' direction='DESC' using='[federated.0fd0boh0twx5i7178zrgh14idiyf].[usr:Calculation_596445492903849984:qk]' />
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]</column>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-color' value='#ffffff' />
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='title' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' scope='cols' value='New cases' />
+            <format attr='display' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='8' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]' value='8' />
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='8' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-color' value='#63adf2' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]</rows>
+        <cols>[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]</cols>
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{388088B4-B46D-4B5F-8324-41EFB030C8DE}' />
+    </worksheet>
+    <worksheet name='Confirmed Cases Bars (WHO Region)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column caption='Confirmed (full grouped.csv)' datatype='integer' name='[Confirmed (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='New cases (full grouped.csv)' datatype='integer' name='[New cases (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column caption='WHO Region (full grouped.csv)' datatype='string' name='[WHO Region (full_grouped.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[Confirmed (full_grouped.csv)]' derivation='None' name='[none:Confirmed (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[WHO Region (full_grouped.csv)]' derivation='None' name='[none:WHO Region (full_grouped.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[New cases (full_grouped.csv)]' derivation='Sum' name='[sum:New cases (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>4290259</max>
+          </filter>
+          <filter class='categorical' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:WHO Region (full_grouped.csv):nk]'>
+            <groupfilter function='level-members' level='[none:WHO Region (full_grouped.csv):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <manual-sort column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:WHO Region (full_grouped.csv):nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Americas&quot;</bucket>
+              <bucket>&quot;South-East Asia&quot;</bucket>
+              <bucket>&quot;Europe&quot;</bucket>
+              <bucket>&quot;Eastern Mediterranean&quot;</bucket>
+              <bucket>&quot;Africa&quot;</bucket>
+              <bucket>&quot;Western Pacific&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]</column>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:WHO Region (full_grouped.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-color' value='#ffffff' />
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='8' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='8' />
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:WHO Region (full_grouped.csv):nk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:WHO Region (full_grouped.csv):nk]' value='8' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-color' value='#63adf2' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:WHO Region (full_grouped.csv):nk]</rows>
+        <cols>[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]</cols>
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{7992706E-EAE0-4F10-92AD-3351B0954B9B}' />
+    </worksheet>
+    <worksheet name='Confirmed Cases Line'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column caption='Confirmed (full grouped.csv)' datatype='integer' name='[Confirmed (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='New cases (full grouped.csv)' datatype='integer' name='[New cases (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Confirmed (full_grouped.csv)]' derivation='None' name='[none:Confirmed (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[New cases (full_grouped.csv)]' derivation='Sum' name='[sum:New cases (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>4290259</max>
+          </filter>
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='1' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' scope='rows' value='' />
+            <encoding attr='space' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' field-type='quantitative' major-origin='0' major-spacing='50000' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' scope='cols' value='false' />
+            <format attr='tick-color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='tick-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='8' />
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' value='8' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1'>Confirmed Cases:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#63adf2'>&lt;SOMME(New cases)&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.3756906986236572' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1'>Confirmed Cases:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#63adf2'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>([federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk] + [federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk])</rows>
+        <cols>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]</cols>
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[yr:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{02FF7310-D0D2-4325-9C4D-CF1484485DBD}' />
+    </worksheet>
+    <worksheet name='Confirmed Cases Line (Log)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column caption='Confirmed (full grouped.csv)' datatype='integer' name='[Confirmed (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='New cases (full grouped.csv)' datatype='integer' name='[New cases (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Confirmed (full_grouped.csv)]' derivation='None' name='[none:Confirmed (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[New cases (full_grouped.csv)]' derivation='Sum' name='[sum:New cases (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>4290259</max>
+          </filter>
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='1' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' scope='rows' value='' />
+            <encoding attr='space' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' field-type='quantitative' scale='log' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' scope='cols' value='false' />
+            <format attr='tick-color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='#00000000' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='8' />
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' value='8' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='div-level' scope='rows' value='1' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1'>Confirmed Cases:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#63adf2'>&lt;SOMME(New cases)&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.3756906986236572' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1'>Confirmed Cases:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#63adf2'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>([federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk] + [federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk])</rows>
+        <cols>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]</cols>
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[yr:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{C8E62BF5-6390-41BC-8FA1-74DF35E6C8E4}' />
+    </worksheet>
+    <worksheet name='Death Cases Ban'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='Deaths (full grouped.csv)' datatype='integer' name='[Deaths (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column caption='New deaths (full grouped.csv)' datatype='integer' name='[New deaths (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Deaths (full_grouped.csv)]' derivation='None' name='[none:Deaths (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[New deaths (full_grouped.csv)]' derivation='Sum' name='[sum:New deaths (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Deaths (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>148011</max>
+          </filter>
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Deaths (full_grouped.csv):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#ffffff' fontsize='12'>Death Cases</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#63adf2' fontsize='18'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{CC3079C2-CBE3-41B0-8ED3-71EBF2F89B9A}' />
+    </worksheet>
+    <worksheet name='Death Cases Bars'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column caption='Calc_DeathCases ' datatype='integer' name='[Calc_ConfirmedCases (copie)_596445492911124481]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM&#13;&#10;(IF [Date] = {FIXED: MAX([Date])} &#13;&#10;and [Deaths (full_grouped.csv)]&gt; 0 &#13;&#10;THEN [New deaths (full_grouped.csv)]&#13;&#10;END)' />
+            </column>
+            <column caption='Country/Region (full grouped.csv)' datatype='string' name='[Country/Region (full_grouped.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='Deaths (full grouped.csv)' datatype='integer' name='[Deaths (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column caption='New deaths (full grouped.csv)' datatype='integer' name='[New deaths (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Country/Region (full_grouped.csv)]' derivation='None' name='[none:Country/Region (full_grouped.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Deaths (full_grouped.csv)]' derivation='None' name='[none:Deaths (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[New deaths (full_grouped.csv)]' derivation='Sum' name='[sum:New deaths (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_ConfirmedCases (copie)_596445492911124481]' derivation='User' name='[usr:Calc_ConfirmedCases (copie)_596445492911124481:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='[Calc_ConfirmedCases (copie)_596445492911124481]' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Country/Region (full_grouped.csv):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]' direction='DESC' using='[federated.0fd0boh0twx5i7178zrgh14idiyf].[usr:Calc_ConfirmedCases (copie)_596445492911124481:qk]' />
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Deaths (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>148011</max>
+          </filter>
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Deaths (full_grouped.csv):qk]</column>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#ffffff' />
+            <encoding attr='space' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' field-type='quantitative' major-origin='0' major-spacing='400' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]' value='8' />
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' value='8' />
+            <format attr='display' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]' value='false' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='1' />
+            <format attr='stroke-color' value='#000000' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='2' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#63adf2' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='2' />
+                <format attr='line-visibility' value='on' />
+                <format attr='line-pattern-only' value='solid' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]</rows>
+        <cols>[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]</cols>
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{2F7315C9-6737-4D4F-906F-EF86042A14E6}' />
+    </worksheet>
+    <worksheet name='Death Cases Line'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='Deaths (full grouped.csv)' datatype='integer' name='[Deaths (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column caption='New deaths (full grouped.csv)' datatype='integer' name='[New deaths (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Deaths (full_grouped.csv)]' derivation='None' name='[none:Deaths (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[New deaths (full_grouped.csv)]' derivation='Sum' name='[sum:New deaths (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Deaths (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>148011</max>
+          </filter>
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Deaths (full_grouped.csv):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='1' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' scope='rows' value='' />
+            <encoding attr='space' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' field-type='quantitative' major-origin='0' major-spacing='1000' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' scope='cols' value='false' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' value='8' />
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' value='8' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='cols' value='1' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='2' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk] + [federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk])</rows>
+        <cols>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]</cols>
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[yr:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{B9B51E40-9DC6-448D-B624-DE3F0DDF7E3C}' />
+    </worksheet>
+    <worksheet name='Death Cases Line (Log)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='Deaths (full grouped.csv)' datatype='integer' name='[Deaths (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column caption='New deaths (full grouped.csv)' datatype='integer' name='[New deaths (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Deaths (full_grouped.csv)]' derivation='None' name='[none:Deaths (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[New deaths (full_grouped.csv)]' derivation='Sum' name='[sum:New deaths (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Deaths (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>148011</max>
+          </filter>
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Deaths (full_grouped.csv):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='1' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' scope='rows' value='' />
+            <encoding attr='space' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' field-type='quantitative' scale='log' scope='rows' type='space' />
+            <format attr='tick-color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' value='#00000000' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='display' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' value='8' />
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]' value='8' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+            <format attr='band-size' scope='rows' value='1' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk] + [federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New deaths (full_grouped.csv):qk])</rows>
+        <cols>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:qk]</cols>
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[yr:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{99FC97E6-5B02-4CC1-B756-D56EBBA71555}' />
+    </worksheet>
+    <worksheet name='Example'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column caption='Country/Region (full grouped.csv)' datatype='string' name='[Country/Region (full_grouped.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='New cases (full grouped.csv)' datatype='integer' name='[New cases (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='MDY' name='[md:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Country/Region (full_grouped.csv)]' derivation='None' name='[none:Country/Region (full_grouped.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[New cases (full_grouped.csv)]' derivation='Sum' name='[sum:New cases (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='205' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk] / [federated.0fd0boh0twx5i7178zrgh14idiyf].[md:Date:ok])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{D5AE983A-781F-4BEB-ABF2-43C5CFDEB122}' />
+    </worksheet>
+    <worksheet name='Map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff'>Confirmes Cases</run>
+            <run fontalignment='1'>Æ </run>
+            <run fontalignment='1' fontcolor='#ffffff'>-</run>
+            <run fontalignment='1'>Æ </run>
+            <run bold='true' fontalignment='1' fontcolor='#63adf2'>&lt;Page Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_wise_latest' name='federated.0fd0boh0twx5i7178zrgh14idiyf' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0fd0boh0twx5i7178zrgh14idiyf'>
+            <column caption='Confirmed (full grouped.csv)' datatype='integer' name='[Confirmed (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column caption='Country/Region (full grouped.csv)' datatype='string' name='[Country/Region (full_grouped.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='New cases (full grouped.csv)' datatype='integer' name='[New cases (full_grouped.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Confirmed (full_grouped.csv)]' derivation='None' name='[none:Confirmed (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Country/Region (full_grouped.csv)]' derivation='None' name='[none:Country/Region (full_grouped.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[New cases (full_grouped.csv)]' derivation='Sum' name='[sum:New cases (full_grouped.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]' included-values='in-range'>
+            <min>0</min>
+            <max>4290259</max>
+          </filter>
+          <slices>
+            <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Confirmed (full_grouped.csv):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[Longitude (generated)]' field-type='quantitative' max='30263141.764652546' min='-23118031.274494585' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[Latitude (generated)]' field-type='quantitative' max='27296193.114298917' min='-21153876.018381059' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' value='#333333' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#e2eaf1</color>
+                <color>#d4e3f1</color>
+                <color>#c6dcf1</color>
+                <color>#b8d5f1</color>
+                <color>#aacff1</color>
+                <color>#9bc8f1</color>
+                <color>#8dc1f1</color>
+                <color>#7fbaf1</color>
+                <color>#71b3f1</color>
+                <color>#63adf2</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#555555' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#555555' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' value='New cases'>
+              <formatted-text>
+                <run fontcolor='#ffffff'>New cases</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park-stroke' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='parks-stroke' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='Coastline' value='true' />
+            <format attr='enabled' id='admin-0-label-5th-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-4th-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-3rd-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-2nd-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-1st-tier' value='false' />
+            <format attr='enabled' id='admin-0-boundaries-bg-sub' value='false' />
+            <format attr='enabled' id='admin-1-boundaries-supress-bg' value='false' />
+            <format attr='enabled' id='admin-1-boundaries-sm-parents-bg' value='false' />
+            <format attr='enabled' id='admin-1-boundaries-md-parents-bg' value='false' />
+            <format attr='enabled' id='admin-1-boundaries-lg-parents-bg' value='false' />
+            <format attr='enabled' id='admin-0-boundaries-dispute-sub' value='false' />
+            <format attr='enabled' id='admin-0-boundaries-sub' value='false' />
+            <format attr='enabled' id='admin-1-boundaries-supress' value='false' />
+            <format attr='enabled' id='admin-1-boundaries-sm-parents' value='false' />
+            <format attr='enabled' id='admin-1-boundaries-md-parents' value='false' />
+            <format attr='enabled' id='admin-1-boundaries-lg-parents' value='false' />
+            <format attr='enabled' id='admin1-water-lines-usa-tableau' value='false' />
+            <format attr='enabled' id='9-dash-line-casing' value='false' />
+            <format attr='enabled' id='9-dash-line' value='false' />
+            <format attr='enabled' id='admin-1-label-9th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-8th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-7th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-6th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-5th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-4th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-3rd-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-2nd-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-1st-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-3rd-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-2nd-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-1st-tier' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' />
+              <size column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' />
+              <lod column='[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#63adf2' fontsize='16'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Country/Region (full_grouped.csv):nk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontsize='12'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:ok]>]]></run>
+                <run fontalignment='1'>Æ&#10;&#10;</run>
+                <run bold='true' fontalignment='1'>Confirmed Cases</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#63adf2' fontsize='20'><![CDATA[<[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.5690608024597168' />
+                <format attr='mark-color' value='#59a14f' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#ffffff' />
+                <format attr='has-halo' value='true' />
+                <format attr='halo-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0fd0boh0twx5i7178zrgh14idiyf].[Latitude (generated)]</rows>
+        <cols>[federated.0fd0boh0twx5i7178zrgh14idiyf].[Longitude (generated)]</cols>
+        <pages>
+          <column>[federated.0fd0boh0twx5i7178zrgh14idiyf].[none:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{AD323797-79FB-4A0B-9C1F-6654D8A97A91}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Tableau de bord 1'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='7' param='vert' type-v2='layout-flow' w='100000' x='73' y='130'>
+          <zone fixed-size='51' h='6641' id='10' is-fixed='true' param='horz' type-v2='layout-flow' w='100000' x='73' y='130'>
+            <zone fixed-size='54' h='6641' id='13' is-fixed='true' is-scaled='1' param='C:/Users/hsossou/Desktop/hSOSSOU/CongnoRise/COVID-19/covid-192989.jpg' type-v2='bitmap' w='4539' x='73' y='130'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone forceUpdate='true' h='6641' id='14' type-v2='text' w='95461' x='4612' y='130'>
+              <formatted-text>
+                <run fontcolor='#ffffff' fontsize='18'>Covid 19 Confirmed Cases By Country</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#00557f' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='669' h='87109' id='17' is-fixed='true' param='horz' type-v2='layout-flow' w='100000' x='73' y='6771'>
+            <zone fixed-size='682' h='87109' id='18' is-fixed='true' name='Map' w='49927' x='73' y='6771'>
+              <layout-cache minheight='250' minwidth='200' type-h='scalable' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='0' />
+                <format attr='background-color' value='#555555' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='341' h='87109' id='21' is-fixed='true' param='vert' type-v2='layout-flow' w='24963' x='50000' y='6771'>
+              <zone fixed-size='91' h='11849' id='22' is-fixed='true' name='Confirmed Cases Ban' show-title='false' w='24963' x='50000' y='6771'>
+                <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='0' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='227' h='29557' id='23' is-fixed='true' name='Confirmed Cases Line' show-title='false' w='24963' x='50000' y='18620'>
+                <layout-cache minheight='100' minwidth='170' type-h='scalable' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='0' />
+                </zone-style>
+              </zone>
+              <zone h='2734' id='31' type-v2='text' w='24963' x='50000' y='48177'>
+                <formatted-text>
+                  <run fontalignment='1' fontcolor='#ffffff'>Top 10 Countries with Confirmed Cases</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='0' />
+                  <format attr='background-color' value='#555555' />
+                </zone-style>
+              </zone>
+              <zone h='42960' id='32' name='Confirmed Cases Bars' show-title='false' w='24963' x='50000' y='50911'>
+                <layout-cache cell-count-h='10' minwidth='200' type-h='cell' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='0' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone h='87109' id='38' is-fixed='true' type-v2='layout-basic' w='25110' x='74963' y='6771'>
+              <zone h='11790' id='35' param='vert' type-v2='layout-flow' w='25110' x='74963' y='6771'>
+                <zone h='11790' id='36' name='Death Cases Ban' show-title='false' w='25110' x='74963' y='6771'>
+                  <layout-cache cell-count-h='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='75319' id='48' is-fixed='true' type-v2='layout-basic' w='25110' x='74963' y='18561'>
+                <zone h='29562' id='39' param='vert' type-v2='layout-flow' w='25110' x='74963' y='18561'>
+                  <zone h='29562' id='37' name='Death Cases Line' show-title='false' w='25110' x='74963' y='18561'>
+                    <layout-cache minheight='100' minwidth='163' type-h='scalable' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='0' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='45757' id='49' param='vert' type-v2='layout-flow' w='25110' x='74963' y='48123'>
+                  <zone h='2734' id='52' type-v2='text' w='25110' x='74963' y='48123'>
+                    <formatted-text>
+                      <run fontalignment='1' fontcolor='#ffffff'>Top 10 Countries with Loss of Life</run>
+                    </formatted-text>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='0' />
+                      <format attr='background-color' value='#555555' />
+                    </zone-style>
+                  </zone>
+                  <zone h='43020' id='42' name='Death Cases Bars' show-title='false' w='25110' x='74963' y='50857'>
+                    <layout-cache cell-count-h='10' type-h='cell' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='0' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='3906' id='53' param='horz' type-v2='layout-flow' w='100000' x='73' y='93880'>
+            <zone forceUpdate='true' h='3906' id='54' type-v2='text' w='100000' x='73' y='93880'>
+              <formatted-text>
+                <run bold='true' fontalignment='2' fontcolor='#ffffff' italic='true'>Source : Kaggle Covid-19 Dataset ***Inspired By: Hanif SOSSOU***</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='0' />
+                <format attr='background-color' value='#555555' />
+              </zone-style>
+            </zone>
+          </zone>
+        </zone>
+        <zone h='9896' id='60' name='Map' pane-specification-id='0' param='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' type-v2='color' w='20351' x='23719' y='86719' />
+        <zone count='4' dropdown='0' friendly-name='Page controle' h='4948' id='66' name='Map' name1='Confirmed Cases Ban' name2='Confirmed Cases Bars' name3='Death Cases Ban' name4='Death Cases Bars' show-title='false' slider='1' synchronized='1' trailctrls='0' type-v2='currpage' w='22548' x='77379' y='1042' />
+        <zone h='29557' id='68' param='horz' type-v2='layout-flow' w='24963' x='50000' y='18620'>
+          <zone h='29557' id='71' name='Confirmed Cases Line (Log)' show-title='false' w='24963' x='50000' y='18620'>
+            <layout-cache minwidth='188' type-h='fixed' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='29557' id='73' param='horz' type-v2='layout-flow' w='25110' x='74963' y='18620'>
+          <zone h='29557' id='74' name='Death Cases Line (Log)' show-title='false' w='25110' x='74963' y='18620'>
+            <layout-cache minwidth='172' type-h='fixed' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='4297' id='75' type-v2='dashboard-object' w='14568' x='55783' y='16536'>
+          <button action='' button-type='text'>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{BDE82681-6C09-46C9-97F5-B88F948748D4}&quot; zone-id=&quot;75&quot; zone-ids=[68]</toggle-action>
+            <button-visual-state>
+              <caption>Default Axis</caption>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12' />
+              <format attr='background-color' value='#555555' />
+            </button-visual-state>
+            <button-visual-state>
+              <caption>Log</caption>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12' />
+              <format attr='background-color' value='#555555' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='3125' id='76' type-v2='dashboard-object' w='13031' x='80161' y='17188'>
+          <button action='' button-type='text'>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{BDE82681-6C09-46C9-97F5-B88F948748D4}&quot; zone-id=&quot;76&quot; zone-ids=[73]</toggle-action>
+            <button-visual-state>
+              <caption>Default Axis</caption>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12' />
+              <format attr='background-color' value='#555555' />
+            </button-visual-state>
+            <button-visual-state>
+              <caption>Log</caption>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12' />
+              <format attr='background-color' value='#555555' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='73568' id='77' param='horz' type-v2='layout-flow' w='73' x='75476' y='18750' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2450' minheight='2450' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='81' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='80' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='43' h='6641' id='13' is-fixed='true' is-scaled='1' param='C:/Users/hsossou/Desktop/hSOSSOU/CongnoRise/COVID-19/covid-192989.jpg' type-v2='bitmap' w='4539' x='73' y='130'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='6641' id='14' type-v2='text' w='95461' x='4612' y='130'>
+                  <formatted-text>
+                    <run fontcolor='#ffffff' fontsize='18'>Covid 19 Confirmed Cases By Country</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='87109' id='18' is-fixed='true' name='Map' w='49927' x='73' y='6771'>
+                  <layout-cache minheight='250' minwidth='200' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#555555' />
+                  </zone-style>
+                </zone>
+                <zone h='9896' id='60' name='Map' pane-specification-id='0' param='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' type-v2='color' w='20351' x='23719' y='86719'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='91' h='11849' id='22' is-fixed='true' name='Confirmed Cases Ban' show-title='false' w='24963' x='50000' y='6771'>
+                  <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='91' h='11790' id='36' is-fixed='true' name='Death Cases Ban' show-title='false' w='25110' x='74963' y='6771'>
+                  <layout-cache cell-count-h='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='227' h='29562' id='37' is-fixed='true' name='Death Cases Line' show-title='false' w='25110' x='74963' y='18561'>
+                  <layout-cache minheight='100' minwidth='163' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='227' h='29557' id='23' is-fixed='true' name='Confirmed Cases Line' show-title='false' w='24963' x='50000' y='18620'>
+                  <layout-cache minheight='100' minwidth='170' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='219' h='29557' id='71' is-fixed='true' name='Confirmed Cases Line (Log)' show-title='false' w='24963' x='50000' y='18620'>
+                  <layout-cache minwidth='188' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='219' h='29557' id='74' is-fixed='true' name='Death Cases Line (Log)' show-title='false' w='25110' x='74963' y='18620'>
+                  <layout-cache minwidth='172' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2734' id='52' type-v2='text' w='25110' x='74963' y='48123'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#ffffff'>Top 10 Countries with Loss of Life</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#555555' />
+                  </zone-style>
+                </zone>
+                <zone h='2734' id='31' type-v2='text' w='24963' x='50000' y='48177'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#ffffff'>Top 10 Countries with Confirmed Cases</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#555555' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43020' id='42' is-fixed='true' name='Death Cases Bars' show-title='false' w='25110' x='74963' y='50857'>
+                  <layout-cache cell-count-h='10' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42960' id='32' is-fixed='true' name='Confirmed Cases Bars' show-title='false' w='24963' x='50000' y='50911'>
+                  <layout-cache cell-count-h='10' minwidth='200' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3906' id='54' type-v2='text' w='100000' x='73' y='93880'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='2' fontcolor='#ffffff' italic='true'>Source : Kaggle Covid-19 Dataset ***Inspired By: Hanif SOSSOU***</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#555555' />
+                  </zone-style>
+                </zone>
+                <zone count='4' dropdown='0' friendly-name='Page controle' h='4948' id='66' name='Map' name1='Confirmed Cases Ban' name2='Confirmed Cases Bars' name3='Death Cases Ban' name4='Death Cases Bars' show-title='false' slider='1' synchronized='1' trailctrls='0' type-v2='currpage' w='22548' x='77379' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{04C8F9FB-FA7E-4693-AC70-A27C9257DB8F}' />
+    </dashboard>
+  </dashboards>
+  <windows pres-mode='true' saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Example'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E6BB11D6-ABF5-43B9-AD00-6AB234549EC8}' />
+    </window>
+    <window class='worksheet' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='169'>
+            <card pane-specification-id='0' param='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' type='size' />
+            <card type='currpage' />
+            <card pane-specification-id='0' param='[federated.0fd0boh0twx5i7178zrgh14idiyf].[sum:New cases (full_grouped.csv):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-27#</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{66F2D982-F0E4-4AFD-A08E-1F1DDD4B4E9D}' />
+    </window>
+    <window class='worksheet' name='Confirmed Cases Line' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-07-27#</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{71BF453C-8985-4DE8-9573-95F63C3AF9DC}' />
+    </window>
+    <window class='worksheet' name='Confirmed Cases Line (Log)' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-07-27#</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{0EEC0E71-CD56-4065-B22A-F40B440AC0FE}' />
+    </window>
+    <window class='worksheet' name='Death Cases Line' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-07-27#</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{355DC4E4-9187-4591-B6BB-614283835E0B}' />
+    </window>
+    <window class='worksheet' name='Death Cases Line (Log)' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-07-27#</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{7A9778F5-9A9C-451C-BDD5-01F9312E2951}' />
+    </window>
+    <window class='worksheet' name='Confirmed Cases Bars' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-07-27#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{C0A54E2D-93AB-4E88-803F-E6FA139DC982}' />
+    </window>
+    <window class='worksheet' name='Confirmed Cases Bars (WHO Region)' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-07-27#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{D02ECF37-F221-480D-AD46-181B47D2D2FF}' />
+    </window>
+    <window class='worksheet' name='Death Cases Bars' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-07-27#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{8C478E4B-47FC-4E18-93F6-E06651D0A425}' />
+    </window>
+    <window class='worksheet' name='Confirmed Cases Ban' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-07-27#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{EB98FA58-B869-419F-9DDC-4D2EA4D7B106}' />
+    </window>
+    <window class='worksheet' name='As of Date' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-07-27#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{38FEC0D6-7C18-4619-8A5C-A27583B39E4A}' />
+    </window>
+    <window class='worksheet' name='Death Cases Ban' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-27#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{7F4A8D81-F79E-4E5E-A136-C8A36F10F41F}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Tableau de bord 1'>
+      <viewpoints>
+        <viewpoint name='Confirmed Cases Ban'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-01-22#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Confirmed Cases Bars'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-01-22#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Confirmed Cases Line'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-07-27#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Confirmed Cases Line (Log)'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-07-27#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Death Cases Ban'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-01-22#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Death Cases Bars'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-01-22#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Death Cases Line'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-07-27#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Death Cases Line (Log)'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-07-27#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Map'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-01-22#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='66' />
+      <simple-id uuid='{BDE82681-6C09-46C9-97F5-B88F948748D4}' />
+    </window>
+  </windows>
+</workbook>
